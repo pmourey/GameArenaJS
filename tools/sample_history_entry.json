@@ -1,0 +1,8 @@
+{
+  "turn": 1,
+  "state": {"players": {"player": {"score": 0}}, "map": {"width": 3, "height": 3}},
+  "actions": [{"player_id": "player", "raw": "MOVE 1 1", "parsed": {"type": "MOVE", "x": 1, "y": 1}, "resolved": "MOVE 1 1"}],
+  "bot_logs": {"player": {"stdout": "MOVE 1 1\n", "stderr": "", "rc": 0, "runner": "subprocess"}},
+  "timestamp": "2025-11-20T12:34:56.789Z"
+}
+

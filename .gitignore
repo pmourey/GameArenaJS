@@ -1,0 +1,109 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Flask
+instance/
+.webassets-cache
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.docker.example
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+!frontend/.env.example
+
+# Docker
+docker-certs/
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+persistent_bots/
+!persistent_bots/.gitkeep
+
+# Backups
+*_backup*/
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Deployment scripts (keep originals only)
+deploy-remote-backup.sh
+deploy\ copy.sh
+
+# Build artifacts that should not be committed
+static_backup_*/
+static/*
+!static/.gitkeep
+
+# Test files
+test_*.sh
+tests/__pycache__/
+runner/__pycache__/
+referees/__pycache__/
+services/__pycache__/
+repositories/__pycache__/
+
+# Documentation drafts (keep main docs)
+Copilot/
+Markdown/
+frontend/Markdown/
+!frontend/Markdown/GAME_RULES_README.md
+
+# Windows specific
+*.bat
+*.ps1
+configure-docker-tls-windows.*
+move-certs.bat
+DOCKER_DESKTOP_TLS_CONFIG.txt
+
+# Certificate management
+copy-certs-*.sh
+generate-docker-certs.sh
+
+# SQL scripts (if they contain sensitive data)
+sql/
+
+# Project specific
+GameArena.code-workspace
+bots/input.txt
+bots/test_bot_*.py
+bots/boss_codes/
+
+# GitHub workflows (if not needed)
+.github/workflows/

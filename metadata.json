@@ -1,0 +1,8 @@
+{
+  "name": "GameArena",
+  "description": "A competitive coding arena platform for programming bots in Pacman game simulations, competing on leaderboards, and rising through leagues.",
+  "prompt": "GameArena bot coding arena",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

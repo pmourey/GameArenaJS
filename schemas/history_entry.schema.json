@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GameArena history_entry",
+  "description": "Schéma JSON pour valider une entrée d'historique (history_entry)",
+  "type": "object",
+  "required": ["turn", "state"],
+  "additionalProperties": true,
+  "properties": {
+    "turn": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Numéro du tour (>= 0)"
+    },
+    "state": {
+      "type": "object",
+      "description": "Snapshot sérialisable de l'état du jeu après le tour"
+    },
+    "actions": {
+      "type": "array",
+      "description": "Liste des actions demandées/appliquées ce tour",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "player_id": { "type": "string" },
+          "raw": { "type": "string" },
+          "parsed": { "type": ["object", "string", "null"] },
+          "resolved": { "type": ["string", "null"] },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "bot_logs": {
+      "type": "object",
+      "description": "Map role -> log object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "stdout": { "type": "string" },
+          "stderr": { "type": "string" },
+          "rc": { "type": "integer" },
+          "runner": { "type": "string" }
+        },
+        "required": [],
+        "additionalProperties": true
+      }
+    },
+    "stdout": { "type": "string" },
+    "stderr": { "type": "string" },
+    "__global_stdout": { "type": "string" },
+    "__global_stderr": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "meta": { "type": "object", "additionalProperties": true }
+  }
+}
+

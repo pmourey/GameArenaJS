@@ -1,0 +1,93 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build (sera copié depuis le stage builder)
+frontend/dist/
+frontend/build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database (sera créée dans le conteneur ou montée via volume)
+*.db
+*.sqlite
+*.sqlite3
+# Exception: autoriser la DB existante pour initialisation
+!instance/gamearena.db
+
+# Env files (utiliser .env.docker.example)
+.env
+.env.local
+
+# Documentation et scripts dev
+*.md
+!README.md
+deploy.sh
+Makefile
+
+# Tests
+tests/
+test_*.py
+*_test.py
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+*.tmp
+
+# Backup files
+*_backup_*
+static_backup_*
+
+# Docker
+docker-compose.override.yml
+Dockerfile.dev
